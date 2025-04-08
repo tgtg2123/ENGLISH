@@ -1,117 +1,429 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Unforgettable Memory: Unique Temples of Nusa Penida</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom, #fdf6e3, #ffe9c5);
-      color: #333;
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-      background-image: url('https://images.unsplash.com/photo-1581447109203-897e5f0676e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
-      background-size: cover;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-color: #fefae0;
-    }
-    body {
-  opacity: 0;
-  animation: fadeIn 2.2s ease-out forwards;
-}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unforgettable Nusa Penida Temples 🌴</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+            color: #333;
+            padding: 2rem;
+            max-width: 900px;
+            margin: auto;
+            background-image: url('https://images.unsplash.com/photo-1541666282672-5f4aad922c63?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bnVzYSUyMHBlbmlkYXxlbnwwfHwwfHx8MA%3D%3D');
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-color: #b2ebf2;
+            opacity: 0;
+            animation: fadeIn 2.2s ease-out forwards;
+            overflow-x: hidden; /* Prevent horizontal scroll from character */
+        }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    h1, h2 {
-      color: #2c3e50;
-      text-align: center;
-    }
-    .section {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 1rem;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  transition: all 0.3s ease-in-out;
-}
+        h1, h2 {
+            color: #00897b;
+            text-align: center;
+        }
 
-    .section:hover {
-  box-shadow: 0 0 25px rgba(255, 153, 0, 0.6), 0 0 40px rgba(255, 94, 0, 0.4);
-  transform: scale(1.02);
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-}
+        .section {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 139, 139, 0.3);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, opacity 0.3s ease;
+            border: 1px solid rgba(0, 139, 139, 0.1);
+            position: relative; /* For z-index */
+            z-index: 1; /* Ensure content is above the character */
+        }
 
-    .camera-look {
-      font-weight: bold;
-      color: #d35400;
-      font-style: italic;
-    }
-    h1 {
-      font-family: 'Papyrus', fantasy;
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
-      background: linear-gradient(to right, #f39c12, #e67e22);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .temple-icon {
-      font-size: 2rem;
-      margin-right: 0.5rem;
-    }
-  </style>
+        .section:hover {
+            box-shadow: 0 6px 16px rgba(76, 175, 80, 0.4), 0 0 10px rgba(76, 175, 80, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .camera-look {
+            font-weight: bold;
+            color: #ff8a65;
+            font-style: italic;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+            position: relative;
+            display: inline-block;
+            padding: 0.3em 0.6em;
+            background: linear-gradient(45deg, #00897b, #4dd0e1, #80deea);
+            background-size: 200% 200%;
+            color: white;
+            border-radius: 0.5em;
+            box-shadow: 0 4px 15px rgba(0, 139, 139, 0.4);
+            animation: gradientBG 5s ease infinite;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            width: fit-content;
+            z-index: 2; /* Above character */
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .temple-icon {
+            font-size: 1.8rem;
+            margin-right: 0.5rem;
+            color: #00bfa5;
+        }
+
+        /* Opacity control */
+        .opacity-control {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2rem auto;
+            width: 80%;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 3; /* Above character */
+            position: relative;
+        }
+
+        .opacity-control label {
+            margin-bottom: 1rem;
+            font-weight: bold;
+            color: #00897b;
+        }
+
+        .opacity-control input {
+            width: 80%;
+            cursor: pointer;
+            accent-color: #00897b;
+        }
+
+        .video-container {
+            position: relative;
+            width: 80%;
+            border-radius: 1rem;
+            overflow: hidden;
+            margin: 0 auto;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 1rem;
+        }
+
+        .video-wrapper {
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            position: relative;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: #00796b;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            width: 70%;
+            height: 3px;
+            background: linear-gradient(to right, #4dd0e1, transparent);
+            bottom: -5px;
+            left: 15%;
+            border-radius: 2px;
+        }
+
+        /* Character Animation */
+        .character {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background-image: url('aw.png'); /* Using your custom image */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            pointer-events: none; /* So it doesn't interfere with clicks */
+            z-index: 10;
+            transition: transform 0.1s ease-out;
+            filter: drop-shadow(0 3px 5px rgba(0,0,0,0.3));
+        }
+
+        .character-container {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            pointer-events: none;
+            z-index: 10;
+            transform-origin: center;
+        }
+
+        .character-message {
+            position: absolute;
+            top: -45px;
+            left: 50%;
+            width: 150px;
+            transform: translateX(-50%);
+            background: white;
+            border-radius: 15px;
+            padding: 7px 12px;
+            font-size: 14px;
+            color: #00796b;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            pointer-events: none;
+        }
+
+        .character-message:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 8px solid white;
+        }
+
+        /* Ensure responsive styling */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+                padding: 0.2em 0.4em;
+            }
+            .section {
+                padding: 1rem;
+                margin-bottom: 1.5rem;
+            }
+            .opacity-control {
+                width: 95%;
+            }
+            .video-container {
+                width: 95%;
+            }
+            .character-container {
+                width: 80px;
+                height: 80px;
+            }
+            .character {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>🛕 Unforgettable Memory: 3 Unique Temples in Nusa Penida 🏝️</h1>
+    <h1>🏝️ Nusa Penida's Unique Temples ☀️</h1>
 
-  <div class="section">
-    <h2><span class="temple-icon">🚗</span>Pura Paluang – The Car Temple</h2>
-    <p>Pura Paluang is probably the quirkiest temple in Nusa Penida. Instead of the usual stone shrines, this one has two that look like cars — one shaped like a VW Beetle and another like a Jeep. No, they don’t run on fuel, they run on faith.</p>
-    <p>It’s believed these car-shaped shrines are vehicles of Lord Shiva. Locals say the temple has existed for centuries — way before cars even existed. Plot twist: spirituality was ahead of its time.</p>
-  </div>
+    <div class="opacity-control">
+        <label for="opacity-slider">Adjust Content Transparency</label>
+        <input type="range" id="opacity-slider" min="30" max="100" value="85" step="5">
+    </div>
 
-  <div class="section">
-    <h2><span class="temple-icon">🕳️</span>Goa Giri Putri – The Hidden Cave Temple</h2>
-    <p>This temple is hidden inside a massive cave, but the entrance? Tiny. Like, "am I supposed to crawl into this crack in the rock?" tiny. But once you're inside, boom — it's huge and echoey and magical.</p>
-    <p>People come here for meditation, purification, and a serious leg day workout. There’s also holy water believed to have healing power. So yes, it’s a full-body spiritual experience.</p>
-  </div>
+    <div class="section">
+        <h2><span class="temple-icon">🚗</span> Pura Paluang – The Quirky Car Temple</h2>
+        <p>Discover the unexpectedly whimsical Pura Paluang, where car-shaped shrines stand instead of traditional stone structures. Imagine the faith driving these unique 'vehicles' of Lord Shiva, a testament to the island's fascinating blend of spirituality and surprise.</p>
+        <p class="camera-look">Picture this: a VW Beetle and a Jeep, not on the road, but as sacred shrines! It's a truly unforgettable sight.</p>
+    </div>
 
-  <div class="section">
-    <h2><span class="temple-icon">🌀</span>Pura Krangkeng – The Sacred Cage Temple</h2>
-    <p>This temple has a literal cage. Yup — made of metal. It’s used in spiritual rituals to trap negative energy or help people go through cleansing ceremonies. Sounds like therapy, but with extra steps.</p>
-    <p>It’s unique, sacred, and just a little spooky — but in a good way. It shows how rich and mystical Balinese Hindu culture can be, especially in Nusa Penida.</p>
-  </div>
+    <div class="section">
+        <h2><span class="temple-icon">⛰️</span> Goa Giri Putri – The Mystical Cave Temple</h2>
+        <p>Venture into the depths of Goa Giri Putri, a temple hidden within a vast cave. The narrow entrance opens into a spacious, echoing sanctuary, a place for meditation and purification. Feel the cool air and the ancient energy within.</p>
+        <p class="camera-look">Crawling through the small opening is part of the adventure, leading to a breathtaking spiritual space inside.</p>
+    </div>
 
-  <div class="section">
-    <h2>🌅 Final Words</h2>
-    <p>Nusa Penida is not just beaches and cliffs. It’s full of spiritual treasures like these temples — weird, wonderful, and unforgettable. Honestly, this trip changed how I see the island. It’s not just beautiful, it’s magical.</p>
-    <p class="camera-look">“Next time you visit Nusa Penida, don’t skip the temples. Trust me, they’ve got more plot twists than Netflix.”</p>
-  </div>
-<div style="text-align: center; margin-top: 3rem;">
-</div>
-<div style="text-align: center; margin-top: 3rem;">
-  <h2>📽️ My Unforgettable Memory</h2>
-  <iframe width="80%" height="400" 
-    src="https://www.youtube.com/embed/DTgbZxAFIDk" 
-    title="Unforgettable Memory" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen
-    style="border-radius: 1rem; box-shadow: 0 0 15px rgba(0,0,0,0.3);">
-  </iframe>
-</div>
+    <div class="section">
+        <h2><span class="temple-icon">⛓️</span> Pura Krangkeng – The Enigmatic Cage Temple</h2>
+        <p>Experience the unique Pura Krangkeng, featuring a literal metal cage used in spiritual rituals. This intriguing practice of containing negative energy offers a glimpse into the deeper mystical aspects of Balinese Hindu culture in Nusa Penida.</p>
+        <p class="camera-look">The cage at Pura Krangkeng is a powerful symbol, a reminder of the island's rich and sometimes mysterious traditions.</p>
+    </div>
 
+    <div class="section">
+        <h2><span style="font-size: 1.6rem; color: #ffb74d;">🌅</span> Reflecting on Nusa Penida's Spirit</h2>
+        <p>Beyond the stunning beaches and dramatic cliffs, Nusa Penida holds a profound spiritual essence embodied by these extraordinary temples. They offer a unique perspective on the island's culture and history, leaving a lasting impression.</p>
+        <p class="camera-look">Don't just see the scenery; feel the spirit of Nusa Penida by exploring its remarkable temples. It's an experience that goes beyond the visual.</p>
+    </div>
+
+    <div style="text-align: center; margin-top: 3rem; margin-bottom: 4rem;">
+        <h2><span style="color: #81c784;">📽️</span> Your Nusa Penida Moment</h2>
+        <div class="video-container">
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/DTgbZxAFIDk"
+                    title="Unforgettable Memory"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Character element with container to help with flipping -->
+    <div class="character-container">
+        <div class="character"></div>
+        <div class="character-message">Hello! Welcome to Nusa Penida!</div>
+    </div>
+
+    <script>
+        // Opacity control for sections
+        const opacitySlider = document.getElementById('opacity-slider');
+        const sections = document.querySelectorAll('.section');
+        
+        opacitySlider.addEventListener('input', function() {
+            const opacityValue = this.value / 100;
+            sections.forEach(section => {
+                section.style.background = `rgba(255, 255, 255, ${opacityValue})`;
+            });
+        });
+
+        // Character animation
+        const characterContainer = document.querySelector('.character-container');
+        const character = document.querySelector('.character');
+        const characterMessage = document.querySelector('.character-message');
+        const messages = [
+            "Hello! Welcome to Nusa Penida!",
+            "The temples here are amazing!",
+            "Have you seen the car temple?",
+            "Let me guide you around!",
+            "The ocean views are beautiful!",
+            "Check out these sacred places!",
+            "Nusa Penida is magical!",
+            "I love exploring the island!"
+        ];
+        
+        // Character animation parameters
+        let posX = 100;
+        let posY = 100;
+        let targetX = Math.random() * (window.innerWidth - 150);
+        let targetY = Math.random() * (document.body.scrollHeight - 150);
+        let directionX = 1; // 1 for right, -1 for left
+        let prevDirection = directionX;
+        let messageShown = false;
+        let messageTimeout;
+        
+        // Main animation loop
+        function animateCharacter() {
+            // Calculate direction to target
+            const dx = targetX - posX;
+            const dy = targetY - posY;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            
+            // Update direction for flipping the character
+            if (dx !== 0) {
+                directionX = dx > 0 ? 1 : -1;
+            }
+            
+            // Flip character based on direction (only flip the character, not the message)
+            if (directionX !== prevDirection) {
+                character.style.transform = `scaleX(${directionX})`;
+                prevDirection = directionX;
+            }
+            
+            // Move character at reduced speed (0.01 instead of 0.03)
+            if (distance > 5) {
+                posX += dx * 0.01;
+                posY += dy * 0.01;
+            } else {
+                // Choose new target when reached current target
+                // Target the full document height, not just the viewport
+                targetX = Math.random() * (window.innerWidth - 150);
+                targetY = Math.random() * (document.body.scrollHeight - 150);
+                
+                // Ensure target is not outside the viewport width
+                targetX = Math.max(50, Math.min(targetX, window.innerWidth - 150));
+                // Ensure Y is within document bounds but can go to bottom of page
+                targetY = Math.max(50, Math.min(targetY, document.body.scrollHeight - 150));
+                
+                // Show a random message occasionally
+                if (!messageShown && Math.random() < 0.3) {
+                    showRandomMessage();
+                }
+            }
+            
+            // Position the character container
+            characterContainer.style.left = posX + 'px';
+            characterContainer.style.top = posY + 'px';
+            
+            requestAnimationFrame(animateCharacter);
+        }
+        
+        // Function to show a random message
+        function showRandomMessage() {
+            const message = messages[Math.floor(Math.random() * messages.length)];
+            characterMessage.textContent = message;
+            characterMessage.style.opacity = '1';
+            messageShown = true;
+            
+            // Hide message after a few seconds
+            clearTimeout(messageTimeout);
+            messageTimeout = setTimeout(() => {
+                characterMessage.style.opacity = '0';
+                messageShown = false;
+            }, 3000);
+        }
+        
+        // Start animation when page loads
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                // Initialize at bottom right
+                posX = window.innerWidth - 200;
+                posY = window.innerHeight - 200;
+                characterContainer.style.left = posX + 'px';
+                characterContainer.style.top = posY + 'px';
+                
+                // Start animation
+                animateCharacter();
+                
+                // Show first message after a short delay
+                setTimeout(showRandomMessage, 2000);
+            }, 1000);
+        });
+        
+        // Update targets when window is resized
+        window.addEventListener('resize', () => {
+            targetX = Math.random() * (window.innerWidth - 150);
+            targetY = Math.random() * (document.body.scrollHeight - 150);
+        });
+    </script>
 </body>
 </html>
